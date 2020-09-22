@@ -4,191 +4,203 @@
   box-sizing: border-box;
 }
 
+/* Element Styles */
+
 body {
-  margin: 0;
-  padding: 0 3em;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  color: #222;
+  	margin: 1em .5em 1em .5em;
+  	text-align: center;
+  	font-family: 'Roboto', sans-serif;
+  	color: #222;
+	background-color:#F6F7F1;
+	font-size: 1.125em;
+	
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	font-weight: 500;
+}
+
+a:hover {
+	color: red;
+}
+
+nav ul {
+	display: flex;
+	list-style-type: none;
+	justify-content: space-around;
+	
+}
+
+nav li {
+	padding: .5em;
+}
+
+nav a {
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+}
+
+footer nav {
+	float: right;
+	display: none;
+}
+
+footer .name {
+/*	float: left;*/
+	padding-top: .5em;
 }
 
 /* Section Styles */
 
-.main-nav {
-	width: 100%;
-	padding: 20px 0;
-	overflow: auto;
-}
-
 .name {
-	float: left;
 	font-size: 180%;
-	padding: .5em 0;
 	font-family: 'Lobster', cursive;
 }
 
+/* Profile information section */
+
 .main-header {
-	padding: 1em 0 1em;
+	
 }
 
 .profile-bio {
-	float: left;
-	width: 60%;
-	margin-top: 0;
-	padding-right: .5em;
-	text-align: left;
 }
 
 .profile-image {
-	width: 40%;
+	width: 75%;
 }
 
-section {
-	display: flex;
-	flex-flow: row wrap;
-	padding: 3% 0; 
-}
+/* Portfolio Section */
 
 .thumbnail-description {
 	margin: 0  2em 2em 2em;
 }
 
-.thumbnail-section {
-	flex: 1;
+.thumbnail {
+	width: 100%;
 }
 
-.thumbnail {
-	width: 300px;
-/*	padding: .25em;	*/
+.thumbnail-section {
+/*	flex: 1;*/
 }
 
 .thumbnail-section-title,
-.contact, .contact-information {
-	padding-top: 5%;
+.contact, 
+.contact-information, {
+	padding-top: 10%;
 }
 
+/* Contact Section */
+
 .contact {
-	width: 50%;
+	width: 90%;
 	margin: 0 auto;
 	padding-bottom: 3em;
 }
 
-
-nav {
-	float: right;
-/*	margin-top: -8px;*/
-}
-
-nav ul {
-	list-style-type: none;
-	display: inline-flex;
-	justify-content: space-around;
-	font-weight: 300;
-	
-}
-
-nav li {
-	margin: auto 0;
-	font-size: 1em;
-	padding: 0 0 0 3em;
+.contact a {
+	color: #3A3A3A;
 }
 
 .top {
-	display: none;
+		display: block;
+		padding-top: 1.5em;
+/*		float: right;*/
 }
 
-@media screen and (max-width: 768px) {
-	.name {
-		float: none;
-		text-align: center;
-	}
-	
-	nav {
-		float: none;
-	}
-	
-	nav ul {
-		padding: 0;
-	}
-	
-	nav li {
-		margin: 0 10px ;
-		padding: .5em;
-	}
-	
-	
-	
+/* Media Queries */
+
+@media screen and (min-width: 320px) {
 	footer .name {
 		float: left;
 	}
 	
-	footer nav {
+	.top {
 		float: right;
 	}
-	
 }
 
-@media screen and (max-width: 544px) {
-	footer .name {
-		float: none;
-		text-align: center;
-	}
-	
-	footer nav {
-		float: none;
-	}
-}
-
-@media screen and (max-width: 460px) {
-	
-	.profile-image {
-		width: 100%;
-	}
-	
-	.profile-bio {
-		float: none;
-		text-align: center;
-		margin: 1em auto 1em;
-		width: 100%;
-	}
-	
-	.contact {
-		width: 100%;
+@media screen and (min-width: 768px) {
+	.main-nav {
+		width: 500px;
+		margin: 0 auto;
 	}
 	
 	section {
-		overflow: auto;
-	}
-	body {
-		padding: 0 .5em;
-	}
-}
-
-@media screen and (max-width: 320px) {
-	nav ul {
-		flex-direction: column;
-	}
-	
-	.thumbnail-description {
-		width: 80%;
+		display: flex;
+		flex-flow: row wrap;
 	}
 	
 	footer nav {
-		display: none;
+		display: flex;
 	}
 	
 	.top {
-		display: inline;
-		text-decoration: none;
-		float: right;
-		padding: 1.5em 0;
-		color: black;
-		font-weight: 300;
+		display: none;
 	}
 	
-	footer .name {
-		float:left
+	.main-header {
+		display: flex;
+		flex-direction: row-reverse;
+		height: 100%;
+		margin: 5em .75em 5em .75em;
+	}
+	
+	.profile-bio {
+		width: 50%;
+		text-align: left;
+		margin: 0 .75em;
+	}
+	
+	.profile-image {
+		width: 45%;
+	}
+	
+	.thumbnail,
+	.thumbnail-description {
+		padding: .75em;
+	}
+	
+	.thumbnail-section {
+		width: 50%;
 	}
 	
 }
 
+@media screen and (min-width: 1024px) {
+	main,
+	.contact {
+		margin-top: 5em; 
+	}
+	
+	.name {
+		float: left;
+		padding: .333em;
+	}
+	
+	.main-nav {
+		float: right;
+		width: 360px;
+	}
+	
+	.main-header {
+		display: inline-block;
+	}
+	
+	.profile-bio {
+		float: left;
+	}
+	
+	.profile-image {
+		float: right;
+		
+	}
+	
+	.thumbnail-section {
+		width: 33.33%;
+	}
+	
+}
