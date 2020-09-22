@@ -27,7 +27,7 @@ a:hover {
 }
 
 nav ul {
-	display: flex;
+	display: inline;
 	list-style-type: none;
 	justify-content: space-around;
 	
@@ -62,13 +62,6 @@ footer .name {
 
 /* Profile information section */
 
-.main-header {
-	
-}
-
-.profile-bio {
-}
-
 .profile-image {
 	width: 75%;
 }
@@ -89,8 +82,8 @@ footer .name {
 
 .thumbnail-section-title,
 .contact, 
-.contact-information, {
-	padding-top: 10%;
+.contact-information {
+	padding-top: 5%;
 }
 
 /* Contact Section */
@@ -108,7 +101,6 @@ footer .name {
 .top {
 		display: block;
 		padding-top: 1.5em;
-/*		float: right;*/
 }
 
 /* Media Queries */
@@ -121,6 +113,10 @@ footer .name {
 	.top {
 		float: right;
 	}
+	
+	.main-nav {
+		padding-bottom: 2em;
+	}
 }
 
 @media screen and (min-width: 768px) {
@@ -129,13 +125,25 @@ footer .name {
 		margin: 0 auto;
 	}
 	
+	.main-nav ul {
+		display: inline-flex;
+	}
+	
+	.main-nav li {
+		padding: 1em 2em 0;
+	}
+	
 	section {
 		display: flex;
 		flex-flow: row wrap;
 	}
 	
 	footer nav {
-		display: flex;
+		display: inline;
+	}
+	
+	footer ul {
+		display: inline-flex;
 	}
 	
 	.top {
@@ -183,7 +191,6 @@ footer .name {
 	
 	.main-nav {
 		float: right;
-		width: 360px;
 	}
 	
 	.main-header {
